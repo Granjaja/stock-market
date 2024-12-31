@@ -8,7 +8,7 @@ export default function Home() {
       <div className="p-10 flex flex-col justify-center gap-5 items-center">
         <h1>Stay up-todate with <span className="text-green-600">Stock Market Price Tracking</span></h1>
         <p>Track live stock prices and stay updated with market trends. Simplify your investments with real-time data and insights at your fingertips</p>
-        <Link href="/prices">
+        <Link href="/dashboard">
       <button className="bg-green-500 text-white p-2 rounded-lg">
         View Prices
       </button>

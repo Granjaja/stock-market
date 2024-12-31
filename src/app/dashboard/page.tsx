@@ -40,7 +40,7 @@ export default function Dashboard() {
 
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
-      <h1 className="text-4xl font-semibold text-center mb-6 text-gray-800">Stocks</h1>
+      <h1 className="text-4xl font-semibold text-center mb-6 text-gray-800">Stocks Price Data</h1>
       {error && <div className="text-red-500 text-center mb-4">{error}</div>}
       <div className="overflow-x-auto bg-white shadow-md rounded-lg p-4">
         <table className="min-w-full table-auto">
