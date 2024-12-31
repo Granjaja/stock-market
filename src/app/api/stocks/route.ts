@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
 
-var d = new Date()
+let d = new Date()
 d.setDate(d.getDate()-1)
 const date = d.toISOString().split("T")[0]  
 
