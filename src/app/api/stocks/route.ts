@@ -30,7 +30,7 @@ const POLYGON_API_KEY = process.env.API_KEY;
   });
   console.log('API Response:', response)
   return NextResponse.json(response.data.results)
-  } catch (error:any) {
+  } catch (error:string | any) {
     
     return NextResponse.json({
       message:"Error fetching data",

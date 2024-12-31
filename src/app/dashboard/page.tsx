@@ -2,8 +2,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+interface Stock {
+  T: string;  // Ticker symbol
+  c: number;  // Close price
+  o: number;  // Open price
+  h: number;  // High price
+  l: number;  // Low price
+  v: number;  // Volume
+}
+
 export default function Dashboard() {
-  const [stocks, setStocks] = useState<any[]>([]);
+  const [stocks, setStocks] = useState<Stock[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -13,7 +22,7 @@ export default function Dashboard() {
         const response = await axios.get("/api/stocks");
         console.log("API Response:", response.data);
         setStocks(response.data);
-      } catch (error: any) {
+      } catch (error: string | any) {
         setError(error.message || "Error fetching stock data");
       } finally {
         setLoading(false);
