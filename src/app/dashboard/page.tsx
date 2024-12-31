@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default function Dashboard() {
   const [stocks, setStocks] = useState<any[]>([]);
-  const [error, setError] = useState<String | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
