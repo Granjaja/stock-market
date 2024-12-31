@@ -20,7 +20,7 @@ export default function Dashboard() {
     const fetchStocks = async () => {
       try {
         const response = await axios.get("/api/stocks");
-        console.log("API Response:", response.data);
+        console.log("API Response:", response.data.results);
         setStocks(response.data);
       } catch (error: unknown) {
         if(error instanceof Error) {

@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-6 text-center">
-      <p className="mb-2">&copy; {new Date().getFullYear()} StockTracker. All rights reserved.</p>
+      <p className="mb-2">&copy; {new Date().getFullYear()} StockD. All rights reserved.</p>
       <p className="mb-2">
         Powered by{' '}
         <Link href="https://polygon.io" className="text-green-500 hover:underline">

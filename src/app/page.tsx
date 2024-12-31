@@ -45,12 +45,12 @@ export default function Home() {
 </div>
 
 <div className="p-10 bg-gray-50">
-  <h2 className="text-3xl font-bold text-center mb-6">Why StockTracker?</h2>
+  <h2 className="text-3xl font-bold text-center mb-6">Why StockD?</h2>
   <div className="flex flex-col items-center space-y-6">
     <div className="bg-white p-6 rounded-lg shadow-md w-full sm:w-3/4 lg:w-1/2">
       <h3 className="text-2xl font-semibold mb-4 text-center">Easy to Use</h3>
       <p className="text-gray-700 text-center">
-        StockTracker is designed to be user-friendly and intuitive for all users.
+        StockD is designed to be user-friendly and intuitive for all users.
       </p>
     </div>
   </div>
