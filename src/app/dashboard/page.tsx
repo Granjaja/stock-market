@@ -22,9 +22,14 @@ export default function Dashboard() {
         const response = await axios.get("/api/stocks");
         console.log("API Response:", response.data);
         setStocks(response.data);
-      } catch (error: string | any) {
-        setError(error.message || "Error fetching stock data");
-      } finally {
+      } catch (error: unknown) {
+        if(error instanceof Error) {
+         setError(error.message || "Error fetching stock data");
+      } 
+    else {
+      setError("An unexpected error occurred");
+    }
+    }finally {
         setLoading(false);
       }
     };
