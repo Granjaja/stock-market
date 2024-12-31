@@ -55,19 +55,22 @@ export default function Dashboard() {
             </tr>
           </thead>
           <tbody>
-            {stocks.map((stock, index) => (
-              <tr
-                key={index}
-                className={index % 2 === 0 ? "bg-gray-50" : "bg-white"} // Alternate row colors
-              >
-                <td className="px-4 py-2 text-center text-gray-800">{stock.T}</td>
-                <td className="px-4 py-2 text-center text-gray-800">{stock.c}</td>
-                <td className="px-4 py-2 text-center text-gray-800">{stock.h}</td>
-                <td className="px-4 py-2 text-center text-gray-800">{stock.l}</td>
-                <td className="px-4 py-2 text-center text-gray-800">{stock.o}</td>
-                <td className="px-4 py-2 text-center text-gray-800">{stock.v}</td>
+          {stocks.length > 0 ? (
+            stocks.map((stock, index) => (
+              <tr key={index}>
+                <td>{stock.T}</td>
+                <td>{stock.c}</td>
+                <td>{stock.h}</td>
+                <td>{stock.l}</td>
+                <td>{stock.o}</td>
+                <td>{stock.v}</td>
               </tr>
-            ))}
+            ))
+          ) : (
+            <tr>
+              <td colSpan={6}>No stock data available.</td>
+            </tr>
+          )}
           </tbody>
         </table>
       </div>
