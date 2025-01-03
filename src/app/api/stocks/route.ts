@@ -26,7 +26,10 @@ const POLYGON_API_KEY = process.env.API_KEY;
     params: {
       adjusted: true,
       apiKey: POLYGON_API_KEY
-    }
+    },
+    headers: {
+      "Content-Type": "application/json",
+    },
   });
   return NextResponse.json(response.data.results)
   } catch (error: unknown) {
