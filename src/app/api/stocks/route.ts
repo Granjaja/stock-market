@@ -28,7 +28,6 @@ const POLYGON_API_KEY = process.env.API_KEY;
       apiKey: POLYGON_API_KEY
     }
   });
-  console.log('API Response:', response)
   return NextResponse.json(response.data.results)
   } catch (error: unknown) {
 
